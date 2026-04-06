@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechSites A.I. — Professional Websites for Local Businesses</title>
-  <meta name="description" content="We build, host, and manage professional websites for local businesses. Live in 48 hours. Starter from $49/month.">
+
+  <!-- Primary Meta Tags -->
+  <title>TechSites A.I. — Professional Websites for Local Businesses | Live in 48 Hours</title>
+  <meta name="title" content="TechSites A.I. — Professional Websites for Local Businesses">
+  <meta name="description" content="We build, host, and manage professional websites for restaurants, contractors, dental offices, salons, and more. Live in 48 hours. From $49/month.">
+  <meta name="keywords" content="local business website, small business website, restaurant website, dental office website, contractor website, professional website design">
+  <meta name="author" content="TechSites A.I.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://techsites.ai">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://techsites.ai">
   <meta property="og:title" content="TechSites A.I. — Professional Websites for Local Businesses">
-  <meta property="og:description" content="We build, host, and manage professional websites for local businesses. Live in 48 hours. Starter from $49/month.">
+  <meta property="og:description" content="We build, host, and manage professional websites. Live in 48 hours. From $49/month.">
   <meta property="og:image" content="https://techsites.ai/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="TechSites A.I.">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://techsites.ai">
   <meta name="twitter:title" content="TechSites A.I. — Professional Websites for Local Businesses">
-  <meta name="twitter:description" content="We build, host, and manage professional websites for local businesses. Live in 48 hours.">
+  <meta name="twitter:description" content="We build, host, and manage professional websites. Live in 48 hours. From $49/month.">
   <meta name="twitter:image" content="https://techsites.ai/assets/img/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="shortcut icon" href="/assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,19 +44,108 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <!-- Structured Data -->
+  <!-- Structured Data (Schema.org @graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "TechSites A.I.",
-    "url": "https://techsites.ai",
-    "email": "techsites.ai@gmail.com",
-    "description": "Professional websites for local businesses. Live in 48 hours.",
-    "offers": [
-      { "@type": "Offer", "name": "Starter", "price": "49", "priceCurrency": "USD", "billingIncrement": "month" },
-      { "@type": "Offer", "name": "Pro", "price": "99", "priceCurrency": "USD", "billingIncrement": "month" },
-      { "@type": "Offer", "name": "Growth", "price": "199", "priceCurrency": "USD", "billingIncrement": "month" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://techsites.ai/#organization",
+        "name": "TechSites A.I.",
+        "url": "https://techsites.ai",
+        "logo": "https://techsites.ai/assets/img/favicon.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "techsites.ai@gmail.com",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://techsites.ai/#website",
+        "url": "https://techsites.ai",
+        "name": "TechSites A.I.",
+        "publisher": { "@id": "https://techsites.ai/#organization" }
+      },
+      {
+        "@type": "Service",
+        "name": "TechSites Starter Plan",
+        "provider": { "@id": "https://techsites.ai/#organization" },
+        "description": "5-page professional website with mobile responsiveness, basic SEO, and hosting.",
+        "offers": {
+          "@type": "Offer",
+          "price": "49",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "TechSites Pro Plan",
+        "provider": { "@id": "https://techsites.ai/#organization" },
+        "description": "10-page website with advanced SEO, Google Analytics, blog, and priority support.",
+        "offers": {
+          "@type": "Offer",
+          "price": "99",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "TechSites Growth Plan",
+        "provider": { "@id": "https://techsites.ai/#organization" },
+        "description": "Unlimited pages, full SEO management, monthly content, and dedicated account manager.",
+        "offers": {
+          "@type": "Offer",
+          "price": "199",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does it take to launch my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We typically launch websites within 48 hours of receiving your content and approvals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you own all content on your website. If you cancel, we'll provide you with all your files."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I migrate my existing website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we can migrate content from your existing website to your new TechSites site at no extra charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a contract?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No long-term contracts. You pay month-to-month and can cancel any time with 30 days notice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in the monthly fee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hosting, SSL certificate, daily backups, security monitoring, and content updates are all included in the monthly plan."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>

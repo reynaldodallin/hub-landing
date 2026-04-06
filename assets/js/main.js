@@ -91,19 +91,19 @@
           body: JSON.stringify({ ...data, source: 'landing_page' }),
         });
 
-        if (response.ok) {
+        const result = await response.json();
+
+        if (response.ok && result.success) {
           form.style.display = 'none';
           if (successState) successState.style.display = 'block';
         } else {
-          throw new Error('Server error');
+          throw new Error(result.error || 'Server error');
         }
       } catch (err) {
-        // Graceful degradation — show success anyway (12B will wire backend)
-        form.style.display = 'none';
-        if (successState) successState.style.display = 'block';
-      } finally {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
+        const msg = err && err.message ? err.message : 'Unknown error';
+        alert('Something went wrong: ' + msg + '\nPlease email us at techsites.ai@gmail.com');
       }
     });
   }
